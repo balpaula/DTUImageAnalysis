@@ -29,17 +29,17 @@ here a new virtual environment called `course02503` is created and activated. If
 
 In this course, there are basically two ways that you can do the exercises:
 
-1. **Jupyter notebooks** is a notebook file with a mix of text(Markdown text) snippets and code blocks, where you can run Python code. We recommend using [Visual Studio Code](https://code.visualstudio.com/) to open and edit the notebooks. For more information and tutorial we recommed looking at [Python Support](https://pythonsupport.dtu.dk/learn-more/vscode/jupyter-notebooks.html). 
+1. **Jupyter notebooks** is a notebook file with a mix of text(Markdown text) snippets and code blocks, where you can run Python code. We recommend using [Visual Studio Code](https://code.visualstudio.com/) to open and edit the notebooks. For more information and tutorial, we recommend looking at [Python Support](https://pythonsupport.dtu.dk/learn-more/vscode/jupyter-notebooks.html). 
 2. **Python scripts** are text files with the `.py` ending (for example `myscript.py`). Python scripts are normally edited and executed using a dedicated **code editor (IDE)**. We recommend [Visual Studio Code](https://code.visualstudio.com/) or alternatively use [Spyder](https://www.spyder-ide.org/) or [PyCharm](https://www.jetbrains.com/products/compare/?product=pycharm&product=pycharm-ce). 
 
 
-We provide the exercise code as pieces of Python code and it is your decision if you want to use them in a Notebook or in a script.
+We provide the exercise code as pieces of Python code, and it is your decision if you want to use them in a Notebook or in a script. The exercise solutions will be given in Notebook-format.
 
 Please see [Figures in notebooks](FigsInNotebooks) for details on figures in notebooks.
 
 If you need an introduction or a refresher to Jupyter notebooks, Python, NumPY and Matplotlib, you can find a good introduction at: [Introduction to Jupyter notebooks and Python](https://github.com/nabriis/Jupyter_Python_Introduction).
 
-It is important that your Notebook, VS Code, Spyder, Pycharm or other development tool is set to use the virtual environment that you created before. To select the right enviroment in VS Code: 
+It is important that your Notebook, VS Code, Spyder, Pycharm or other development tool is set to use the virtual environment that you created before. To select the right environment in VS Code: 
 1. Press crtl + shift + P
 2. Select Python: Select Interpreter and press enter 
 3. Choose the option with the ending (`course02503`) 
@@ -74,7 +74,8 @@ You should also install
 
 The data and material needed for this exercise can be found here: [exercise data and material](data)
 
-Start by creating and exercise folder where you keep your data, Python scripts or Notebooks. Download or clone the data and material (from GitHub instructions below) and place them in this folder.
+Start by creating an exercise folder to store your data, Python scripts, and notebooks. Download or clone the required data and materials (see the GitHub instructions below) and place them in this folder. For example, for Exercise 1 we recommend saving your script or notebook in: ../DTUImageAnalysis/exercises/ex1-IntroductionToImageAnalysis/
+
 
 ### Using GitHub to get all the material and data at once
 
@@ -86,5 +87,6 @@ You can get all the exercise material including the data by (for example):
      cd /path/to/exercise/folder
      git clone https://github.com/RasmusRPaulsen/DTUImageAnalysis.git
      ```
+
 
 
