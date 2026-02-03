@@ -17,8 +17,8 @@ When you have installed Conda and VS Code, you can start by creating a **virtual
 Start an **VS Code terminal** and do:
 
 ```Shell
-conda create --name course02503 python=3.10
-conda activate course02503
+conda create --name imageanalysis python=3.10
+conda activate imageanalysis
 ```
 
 here a new virtual environment called `course02503` is created and activated. If you want more details on how setup environments there is a guide from [Python support](https://pythonsupport.dtu.dk/learn-more/packages-and-environments/environments.html). 
@@ -87,6 +87,7 @@ You can get all the exercise material including the data by (for example):
      cd /path/to/exercise/folder
      git clone https://github.com/RasmusRPaulsen/DTUImageAnalysis.git
      ```
+
 
 
 
