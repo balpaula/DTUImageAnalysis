@@ -20,7 +20,25 @@ def process_gray_image(img):
     # https://scikit-image.org/docs/stable/user_guide/data_types.html#image-processing-pipeline
     """
     img_float = img_as_float(img)
-    img_proc = 1 - img_float
+    
+    # ANSWER TO EXERCISE 17
+    
+    # Method 1: Thresholding (converts to binary image)
+    threshold_val = 0.5
+    img_proc = (img_float > threshold_val).astype(float)
+    
+    # Method 2: Gamma mapping
+    # gamma = 1.5
+    # img_proc = img_float ** gamma
+    
+    # Method 3: Histogram stretching
+    # min_val = img_float.min()
+    # max_val = img_float.max()
+    # img_proc = (img_float - min_val) / (max_val - min_val)
+    
+    # Method 4: Original inversion
+    # img_proc = 1 - img_float
+    
     return img_as_ubyte(img_proc)
 
 
