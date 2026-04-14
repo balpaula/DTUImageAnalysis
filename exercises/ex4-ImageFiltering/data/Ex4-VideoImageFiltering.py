@@ -17,14 +17,22 @@ def show_in_moved_window(win_name, img, x, y):
     cv2.imshow(win_name, img)
 
 
-def process_gray_image(img):
+def process_gray_image(img, prewitt_flag=False, otsu_flag=False, median_flag=False):
     """
     Do a simple processing of an input gray scale image and return the processed image.
     # https://scikit-image.org/docs/stable/user_guide/data_types.html#image-processing-pipeline
     """
     # Do something here:
     proc_img = img.copy()
-    return img_as_ubyte(proc_img)
+    proc_img_gray = img_as_ubyte(proc_img)
+    if prewitt_flag:
+        return prewitt(proc_img_gray)
+    if otsu_flag:
+        return threshold_otsu(proc_img_gray)
+    if median_flag:
+        footprint = np.ones([10, 10])
+        proc_img = median(proc_img, footprint)
+    return proc_img_gray
 
 
 def process_rgb_image(img):
@@ -71,7 +79,13 @@ def capture_from_camera_and_show_images():
             # convert back to OpenCV BGR to show it
             proc_img = proc_img[:, :, ::-1]
         else:
-            proc_img = process_gray_image(new_image_gray)
+            # proc_img = process_gray_image(new_image_gray, prewitt_flag=False, otsu_flag=False)
+
+            # Automatic edge-detection using Prewitt filter + Otsu thresholding:
+            # proc_img = process_gray_image(new_image_gray, prewitt_flag=True, otsu_flag=True, median_flag=False)
+
+            # Median filtering
+            proc_img = process_gray_image(new_image_gray, median_flag=True)
 
         # update FPS - but do it slowly to avoid fast changing number
         new_time = time.perf_counter()
